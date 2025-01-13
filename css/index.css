@@ -14,3 +14,11 @@ p {
     color: red;
 }
 
+body {
+    background-color: black;
+}
+
+/* this rule applies to everything */
+* {
+ box-sizing: border-box;
+}
