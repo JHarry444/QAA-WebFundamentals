@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Making any <input> OR <textarea> in a <form> a block-level element */
+        form input,
+        form textarea,
+        form select {
+            display: block;
+        }
+
+        /* ATTRIBUTE selector - will ONLY select inputs that are radios OR checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Forms</h1>
+        <section>
+            <h2>Basic</h2>
+            <form>
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="usernameInput">Username</label>
+                    <input type="text" name="username" id="usernameInput" required>
+                    <label for="emailInput">Email</label>
+                    <input type="email" name="email" id="emailInput" required>
+                    <label for="passwordInput">Password</label>
+                    <input type="password" name="password" id="passwordInput" required minlength="4" maxlength="10">
+                </fieldset>
+                <label for="dobInput">DOB</label>
+                <input type="date" name="dob" id="dobInput">
+                <label for="timeInput">Appointment</label>
+                <input type="time" name="appointment" id="timeInput">
+                <label for="areaInput">Comments</label>
+                <textarea name="comments" id="areaInput" cols="30" rows="10"></textarea>
+
+                <fieldset disabled>
+                    <!-- Group of inputs - allows for easy styling/disabling/etc of a group of inputs at once -->
+                    <legend>Why are there two kinds of button?</legend>
+                    <input type="button" value="OLD">
+                    <button>NEW</button>
+                </fieldset>
+
+                <label for="countryDropdown">Country</label>
+                <select name="country" id="countryDropdown">
+                    <!-- Selects have a display value (i.e. 'United Kingdom') and an actual value (i.e. 'uk') -->
+                    <option value="uk">United Kingdom</option>
+                    <option value="us">United States</option>
+                    <option value="fr" selected>France</option>
+                </select>
+
+                <label for="newsletterCheck">Do you want to sign up for our newsletter?</label>
+                <input type="checkbox" name="newsletter" id="newsletterCheck">
+                <br>
+                <label for="manualRadio">Manual</label>
+                <input type="radio" name="manualOrAuto" id="manualRadio">
+                <label for="autoRadio">Automatic</label>
+                <input type="radio" name="manualOrAuto" id="autoRadio">
+                <br>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
