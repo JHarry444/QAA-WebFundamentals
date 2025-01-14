@@ -12,16 +12,21 @@
             color: white;
         }
 
+        #basicForms {
+            margin: auto;
+            max-width: fit-content;
+        }
+
         /* Making any <input> OR <textarea> in a <form> a block-level element */
-        form input,
-        form textarea,
-        form select {
+        #basicForms form input,
+        #basicForms form textarea,
+        #basicForms form select {
             display: block;
         }
 
         /* ATTRIBUTE selector - will ONLY select inputs that are radios OR checkboxes */
-        input[type="radio"],
-        input[type="checkbox"] {
+        #basicForms input[type="radio"],
+        #basicForms input[type="checkbox"] {
             display: inline;
         }
     </style>
@@ -30,7 +35,7 @@
 <body>
     <main>
         <h1>Forms</h1>
-        <section>
+        <section id="basicForms">
             <h2>Basic</h2>
             <form>
                 <fieldset>
