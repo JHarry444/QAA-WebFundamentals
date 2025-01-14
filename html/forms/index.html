@@ -12,30 +12,39 @@
             color: white;
         }
 
-        #basicForms {
-            margin: auto;
+        /* Puts the three sections into three equally-sized columns */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        section.formsExample {
             max-width: fit-content;
         }
 
+        section.formsExample form button {
+            margin-top: 2px;
+        }
+
         /* Making any <input> OR <textarea> in a <form> a block-level element */
-        #basicForms form input,
-        #basicForms form textarea,
-        #basicForms form select {
+        form input,
+        form textarea,
+        form select {
             display: block;
         }
 
         /* ATTRIBUTE selector - will ONLY select inputs that are radios OR checkboxes */
-        #basicForms input[type="radio"],
-        #basicForms input[type="checkbox"] {
+        input[type="radio"],
+        input[type="checkbox"] {
             display: inline;
         }
     </style>
 </head>
 
 <body>
+    <h1>Forms</h1>
     <main>
-        <h1>Forms</h1>
-        <section id="basicForms">
+        <section class="formsExample">
             <h2>Basic</h2>
             <form>
                 <fieldset>
@@ -95,6 +104,28 @@
                     Buttons in a form default to 'submit';
                     they're the only way to actually send the data other than pressing the ENTER key 
                 -->
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+        <section class="formsExample">
+            <h2>POST</h2>
+            <form action="http://13.41.85.86:8081/trainers/create" method="post" id="createForm">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age">
+                    <label for="specialism">Specialism</label>
+                    <input type="text" name="specialism" id="specialism">
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+        <section class="formsExample">
+            <h2>GET</h2>
+            <form action="http://13.41.85.86:8081/trainers/getByName" method="get">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
                 <button type="submit">SUBMIT</button>
             </form>
         </section>
