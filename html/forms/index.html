@@ -35,7 +35,16 @@
             <form>
                 <fieldset>
                     <legend>Account Details</legend>
+                    <!-- Label describes the input. For links the label to the input using the id (improves accessibility) -->
                     <label for="usernameInput">Username</label>
+                    <!-- 
+                        Inputs have a:
+                            - type (the kind of data they collect)
+                            - name (describes the data)
+                            - id (unique ref - only really useful for the label here)
+                            - value (actual data)
+                            - validation (i.e. required means a field MUST have a value, min/maxlength control how many chars in the value, etc)
+                    -->
                     <input type="text" name="username" id="usernameInput" value="jh" required>
                     <label for="emailInput">Email</label>
                     <input type="email" name="email" id="emailInput" required>
@@ -51,6 +60,7 @@
 
                 <fieldset disabled>
                     <!-- Group of inputs - allows for easy styling/disabling/etc of a group of inputs at once -->
+                    <!-- Disabled fields cannopt be interacted with -->
                     <legend>Why are there two kinds of button?</legend>
                     <input type="button" value="OLD">
                     <button>NEW</button>
@@ -67,11 +77,19 @@
                 <label for="newsletterCheck">Do you want to sign up for our newsletter?</label>
                 <input type="checkbox" name="newsletter" id="newsletterCheck">
                 <br>
+                <!-- 
+                    Radio buttons have the same name so that the browser knows they're part of the same field 
+                    (otherwise you'd be able to selct both) 
+                -->
                 <label for="manualRadio">Manual</label>
                 <input type="radio" name="manualOrAuto" id="manualRadio">
                 <label for="autoRadio">Automatic</label>
                 <input type="radio" name="manualOrAuto" id="autoRadio">
                 <br>
+                <!-- 
+                    Buttons in a form default to 'submit';
+                    they're the only way to actually send the data other than pressing the ENTER key 
+                -->
                 <button type="submit">SUBMIT</button>
             </form>
         </section>
