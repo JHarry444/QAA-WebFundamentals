@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        alert("embedded");
+        fetch("http://localhost:8081/trainers/get").then(res => res.json()).then((json) => {
+            console.log(json);
+
+            const output = document.getElementById("output");
+            json.forEach(trainer => {
+                const newP = document.createElement("p");
+                newP.textContent = trainer.name;
+                output.appendChild(newP);
+            })
+        }).catch(err => console.error(err));
+    </script>
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+    <div id="output">
+
+    </div>
+</body>
+
+</html>
