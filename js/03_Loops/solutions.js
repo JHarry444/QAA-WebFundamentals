@@ -1,26 +1,26 @@
+//  Ex. 5
+// const correctPassword = "open sesame";
 
-// Ex 3.
+// let userInput = prompt("Please enter the password:");
 
-let score = 0;
+// while (userInput != correctPassword) {
+//     userInput = prompt("Incorrect password. Please try again:");
+// }
 
 
-const answer1 = prompt("What is the capital of Australia?");
+// alert("Correct!");
 
-if (answer1 == "Canberra" || answer1 == "canberra") {
-    score = score + 1;
+// Ex 6a.
+for (let num = 1; num <= 10; num = num + 1) {
+    debugger;
+    // long version of line 23 to show concatentation
+    let output = "";
+    output = output + "<p>";
+    output = output + num;
+    output = output + "</p>";
+    document.write(output);
+
+    // document.write("<p>" + num + "</p>");
+
+    document.write(`<p>${num}</p>`);
 }
-
-const answer2 = prompt("Which language has the most native speakers?");
-
-if (answer2.toLowerCase() == "spanish") {
-    score = score + 1;
-}
-
-const answer3 = prompt("What is the most common surname in the US?");
-
-if (answer3 == "Smith") {
-    score = score + 1;
-}
-
-
-alert("You got " + score + " of 3 answers correct!");
