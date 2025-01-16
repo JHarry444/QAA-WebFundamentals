@@ -33,7 +33,17 @@ function introduction(name, age, job) {
 }
 
 
-introduction("Jordan", 30, "Trainer");
-introduction("Cameron", 32, "Trainer");
-introduction("Piers", "Trainer");
+// introduction("Jordan", 30, "Trainer");
+// introduction("Cameron", 32, "Trainer");
+// introduction("Piers", "Trainer");
 
+let a = 12;
+let b = 14;
+
+function addNumbers(a, b) {
+    return a + b;
+}
+
+console.log(addNumbers(25, 45));
+console.log(addNumbers(345, 34));
+console.log(addNumbers(23, 34));
