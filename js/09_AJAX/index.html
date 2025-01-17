@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="index.js" defer></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Puts the three sections into three equally-sized columns */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        section.ajaxExample {
+            max-width: fit-content;
+        }
+
+        section.ajaxExample form button {
+            margin-top: 2px;
+        }
+
+        /* Making any <input> OR <textarea> in a <form> a block-level element */
+        form input,
+        form textarea,
+        form select {
+            display: block;
+        }
+
+        /* ATTRIBUTE selector - will ONLY select inputs that are radios OR checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="ajaxExample">
+            <h2>POST</h2>
+            <form action="http://35.177.92.158:8081/trainers/create" method="post" id="createForm"
+                onsubmit="createTrainer(event)">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age">
+                    <label for="specialism">Specialism</label>
+                    <input type="text" name="specialism" id="specialism">
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+        <section class="ajaxExample">
+            <h2>GET</h2>
+            <div id="output">
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
