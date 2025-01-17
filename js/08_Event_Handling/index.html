@@ -20,6 +20,25 @@
         <label for="demoInput">Demo</label>
         <input type="text" id="demoInput" oninput="logTyping(event)">
     </section>
+    <section>
+        <h2>counter</h2>
+        <label for="counterInput">Counter</label>
+        <input type="number" id="counterInput" value="0" readonly>
+        <button onclick="incrementCounter()">+1</button>
+    </section>
+    <section>
+        <h2>fancy counter</h2>
+        <label for="fancyCounterInput">Fancy Counter</label>
+        <br>
+        <input type="number" id="fancyCounterInput" value="0" readonly>
+        <br>
+        <!-- Can pass parameters to event handlers just like normal functions -->
+        <button onclick="changeCounter(-5)">-5</button>
+        <button onclick="changeCounter(-1)">-1</button>
+        <button onclick="changeCounter('R')">R</button>
+        <button onclick="changeCounter(1)">+1</button>
+        <button onclick="changeCounter(5)">+5</button>
+    </section>
 </body>
 
 </html>
