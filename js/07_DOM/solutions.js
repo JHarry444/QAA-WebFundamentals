@@ -6,7 +6,7 @@ document.body.appendChild(newP);
 newP.textContent = "Jordan";
 // In the HTML, add a blank <p> then change its text using JavaScript.
 const myPara = document.getElementById("myPara");
-// debugger
+
 myPara.textContent = "Bl00p!";
 // Grab the object that you created yesterday to represent yourself and add the data to the page using the DOM manipulation methods you've been shown
 const me = {
@@ -36,8 +36,8 @@ for (let i = 0; i < me.specialisms.length; i = i + 1) {
     const specialism = document.createElement("li");
     specialism.textContent = me.specialisms[i];
     myHobbies.appendChild(specialism);
-
 }
+
 document.body.appendChild(myHobbies);
 
 // Extension:

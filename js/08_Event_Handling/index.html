@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <section>
+        <h2>onclick</h2>
+        <input type="text" id="newParaInput">
+        <button onclick="addParagraph();">Add paragraph</button>
+    </section>
+    <br>
+    <section>
+        <h2>oninput</h2>
+        <label for="demoInput">Demo</label>
+        <input type="text" id="demoInput" oninput="logTyping(event)">
+    </section>
+</body>
+
+</html>
