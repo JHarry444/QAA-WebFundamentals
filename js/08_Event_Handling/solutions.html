@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions</title>
+    <script src="solutions.js" defer></script>
+    <style>
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Exercise 1</h2>
+            <button onclick="eatThePizza()">Eat the pizza</button>
+            <p id="pizzaParagraph">&#127829</p>
+        </section>
+        <section>
+            <h2>Exercise 2</h2>
+            <label for="pwdInput">Enter the password:</label>
+            <input type="text" id="pwdInput">
+            <button onclick="checkPassword()">Check Password</button>
+        </section>
+        <section>
+            <h2>Exercise 3</h2>
+            <button onclick="toggleDark()">Toggle dark mode</button>
+        </section>
+        <section>
+            <h2>Exercise 4</h2>
+            <label for="expense1">Expense 1</label>
+            <input type="number" id="expense1">
+            <br>
+            <label for="expense2">Expense 2</label>
+            <input type="number" id="expense2">
+            <br>
+            <label for="expense3">Expense 3</label>
+            <input type="number" id="expense3">
+            <br>
+            <button onclick="calcExpenses()">Calc Expenses</button>
+            <br>
+            <label for="expenseOutput">Total Expenses</label>
+            <input type="number" id="expenseOutput" readonly>
+        </section>
+    </main>
+
+</body>
+
+</html>
